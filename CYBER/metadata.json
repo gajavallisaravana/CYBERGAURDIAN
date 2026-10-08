@@ -1,0 +1,6 @@
+{
+  "name": "Cyber Guardian",
+  "description": "Cyber Guardian — Learn. Detect. Defend. Gamified decision-based cybersecurity simulation platform with realistic threat challenges, AI Cyber Coach, and XP rewards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

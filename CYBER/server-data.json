@@ -1,0 +1,1611 @@
+{
+  "users": [
+    {
+      "_id": "user-demo-01",
+      "id": "user-demo-01",
+      "name": "Alex Chen",
+      "email": "guardian@cyberdefense.org",
+      "passwordHash": "$2b$10$r1XmQuD418KdduBEIWxRl.ed/.NWupszMgv5NxtasMV6UYrzdk75W",
+      "avatar": "shield-cyan",
+      "level": 2,
+      "xp": 275,
+      "streak": 3,
+      "badges": [
+        "first-mission",
+        "streak-champion"
+      ],
+      "completedMissions": [
+        "phish-01",
+        "soc-01"
+      ],
+      "totalAttempts": 4,
+      "correctAttempts": 3,
+      "collegeName": "National Cyber Academy",
+      "createdAt": "2026-10-08T17:09:09.659Z"
+    },
+    {
+      "_id": "user-demo-02",
+      "id": "user-demo-02",
+      "name": "Maya Patel",
+      "email": "maya@campus.edu",
+      "passwordHash": "$2b$10$r1XmQuD418KdduBEIWxRl.ed/.NWupszMgv5NxtasMV6UYrzdk75W",
+      "avatar": "shield-blue",
+      "level": 4,
+      "xp": 850,
+      "streak": 5,
+      "badges": [
+        "first-mission",
+        "phishing-hunter",
+        "scam-detector"
+      ],
+      "completedMissions": [
+        "phish-01",
+        "phish-02",
+        "phish-03",
+        "scam-01",
+        "scam-02",
+        "scam-03"
+      ],
+      "totalAttempts": 7,
+      "correctAttempts": 6,
+      "collegeName": "Stanford Cyber Lab",
+      "createdAt": "2026-10-08T17:09:09.660Z"
+    },
+    {
+      "_id": "user-demo-03",
+      "id": "user-demo-03",
+      "name": "Jordan Rivera",
+      "email": "jordan@mit.edu",
+      "passwordHash": "$2b$10$r1XmQuD418KdduBEIWxRl.ed/.NWupszMgv5NxtasMV6UYrzdk75W",
+      "avatar": "shield-emerald",
+      "level": 5,
+      "xp": 1250,
+      "streak": 7,
+      "badges": [
+        "first-mission",
+        "phishing-hunter",
+        "password-master",
+        "safe-browser"
+      ],
+      "completedMissions": [
+        "phish-01",
+        "phish-02",
+        "pwd-01",
+        "pwd-02",
+        "pwd-03",
+        "browse-01",
+        "browse-02"
+      ],
+      "totalAttempts": 8,
+      "correctAttempts": 7,
+      "collegeName": "MIT Information Systems",
+      "createdAt": "2026-10-08T17:09:09.660Z"
+    },
+    {
+      "_id": "user-1791489252818-i4ss3",
+      "id": "user-1791489252818-x8rtu",
+      "name": "Verification Officer",
+      "email": "officer@defense.net",
+      "passwordHash": "$2b$10$kMa1/GjYMIySrmL0h1syBuaz6rFS0qHuZhKQFXcb7OFGwl8gugMoq",
+      "avatar": "shield-cyan",
+      "level": 1,
+      "xp": 100,
+      "streak": 1,
+      "badges": [
+        "first-mission"
+      ],
+      "completedMissions": [
+        "phish-01"
+      ],
+      "totalAttempts": 1,
+      "correctAttempts": 1,
+      "collegeName": "Cyber Defense Academy",
+      "createdAt": "2026-10-08T19:54:12.818Z"
+    }
+  ],
+  "progress": [
+    {
+      "_id": "prog-01",
+      "userId": "user-demo-01",
+      "challengeId": "phish-01",
+      "completed": true,
+      "score": 100,
+      "attempts": 3,
+      "isCorrect": true,
+      "completedAt": "2026-10-08T17:09:28.738Z",
+      "chosenOptionId": "opt-1",
+      "consequence": "Your simulated account credentials would have been captured by an external phishing server."
+    },
+    {
+      "_id": "prog-02",
+      "userId": "user-demo-01",
+      "challengeId": "soc-01",
+      "completed": true,
+      "score": 150,
+      "attempts": 1,
+      "isCorrect": true,
+      "completedAt": "2026-10-08T17:09:09.660Z"
+    },
+    {
+      "_id": "prog-1791489267356-jtfk",
+      "userId": "user-1791489252818-i4ss3",
+      "challengeId": "phish-01",
+      "completed": true,
+      "score": 100,
+      "attempts": 1,
+      "chosenOptionId": "opt-3",
+      "isCorrect": true,
+      "consequence": "Threat neutralized! You verified through an independent official channel and flagged the phishing attempt.",
+      "completedAt": "2026-10-08T19:54:27.356Z"
+    }
+  ],
+  "challenges": [
+    {
+      "id": "phish-01",
+      "title": "Urgent Account Suspension Notice",
+      "category": "phishing",
+      "categoryLabel": "Phishing Hunter",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "email",
+      "scenario": {
+        "sender": "Security Support Team",
+        "senderAddress": "support@paypaI-verify-accounts.net",
+        "subject": "URGENT: Your account will be locked within 2 hours",
+        "timestamp": "Today at 08:42 AM",
+        "body": "Dear customer,\n\nWe detected suspicious activity from an unrecognized IP address. To prevent permanent deactivation, you must verify your identity immediately by clicking below.",
+        "attachmentOrUrl": "https://paypaI-account-update.sec-login.top/verify",
+        "contextNote": "You received this notification while checking your morning inbox."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Click the link immediately to prevent suspension",
+          "isCorrect": false,
+          "consequence": "Your simulated account credentials would have been captured by an external phishing server.",
+          "whatYouMissed": [
+            "High artificial urgency (\"within 2 hours\")",
+            "Misspelled sender domain (capital I instead of lowercase l: paypaI)",
+            "Suspicious non-official domain (.sec-login.top)"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Forward the email to coworkers to ask their opinion",
+          "isCorrect": false,
+          "consequence": "You could propagate malicious links across your internal organization network.",
+          "whatYouMissed": [
+            "Unverified phishing messages should never be forwarded without quarantine"
+          ]
+        },
+        {
+          "id": "opt-3",
+          "text": "Open the official app/website directly and report the email",
+          "isCorrect": true,
+          "consequence": "Threat neutralized! You verified through an independent official channel and flagged the phishing attempt."
+        },
+        {
+          "id": "opt-4",
+          "text": "Reply to the sender asking if this is legitimate",
+          "isCorrect": false,
+          "consequence": "Replying confirms your active email address to malicious spammers, inviting more targeted attacks.",
+          "whatYouMissed": [
+            "Attackers control the reply address and will fake confirmation"
+          ]
+        }
+      ],
+      "explanation": "Scammers routinely manufacture panic with artificial time limits. Always verify account issues directly through the official website or mobile app, never through email links.",
+      "hint": "Inspect the sender email address closely and notice the artificial sense of urgency."
+    },
+    {
+      "id": "phish-02",
+      "title": "Campus IT Password Expiration Warning",
+      "category": "phishing",
+      "categoryLabel": "Phishing Hunter",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "email",
+      "scenario": {
+        "sender": "University IT Helpdesk",
+        "senderAddress": "admin-desk@univ-portal-sys-auth.org",
+        "subject": "Action Required: Your student portal password expires today",
+        "timestamp": "Today at 11:15 AM",
+        "body": "Student portal passwords expire every 90 days. Click below to keep your current password and maintain uninterrupted access to coursework and exam schedules.",
+        "attachmentOrUrl": "http://univ-portal-sys-auth.org/keep-password",
+        "contextNote": "Final exams are next week, making access disruptions worrying."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Click the link and submit your university login credentials",
+          "isCorrect": false,
+          "consequence": "Your student portal and linked university email would be compromised by hackers.",
+          "whatYouMissed": [
+            "Official university systems never ask you to \"keep your password\" via an external .org domain",
+            "Unencrypted HTTP connection link",
+            "External unverified sender domain"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Ignore the email and change password later if it actually expires",
+          "isCorrect": false,
+          "consequence": "Ignoring without reporting leaves other classmates vulnerable to the active campus phishing campaign.",
+          "whatYouMissed": [
+            "Reporting suspicious campus communications protects fellow students"
+          ]
+        },
+        {
+          "id": "opt-3",
+          "text": "Check the real university portal directly and report the email to IT",
+          "isCorrect": true,
+          "consequence": "Excellent work! You avoided credential theft and alerted the university security team."
+        }
+      ],
+      "explanation": "Educational institutions are frequent targets of credential harvesting. Legitimate IT departments will never ask you to keep your password by clicking an external link.",
+      "hint": "Look at the sender domain. Is it an official campus domain (.edu) or a random .org?"
+    },
+    {
+      "id": "phish-03",
+      "title": "Cloud Document Sharing Invitation",
+      "category": "phishing",
+      "categoryLabel": "Phishing Hunter",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "email",
+      "scenario": {
+        "sender": "Google Docs Notifications",
+        "senderAddress": "share-notification@docs-storage-preview.co",
+        "subject": "Alex Rivera shared \"Q4_Confidential_Bonus_Structure.pdf\" with you",
+        "timestamp": "Yesterday at 04:30 PM",
+        "body": "Alex Rivera has invited you to view the following document. Sign in with your corporate or personal email account to view the restricted PDF.",
+        "attachmentOrUrl": "https://docs-storage-preview.co/auth/oauth-grant",
+        "contextNote": "You do not recall any coworker named Alex Rivera."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Click the document to see if you qualify for the bonus",
+          "isCorrect": false,
+          "consequence": "Curiosity exploit! The simulated landing page would have harvested your OAuth authorization or email password.",
+          "whatYouMissed": [
+            "Curiosity and greed bait (\"Confidential Bonus\")",
+            "Unknown sender from outside your organization",
+            "Fake Google Docs domain (docs-storage-preview.co instead of google.com)"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Check your Google Drive directly in a new tab without clicking the link",
+          "isCorrect": true,
+          "consequence": "Safe and savvy! When you opened Google Drive directly, no such document existed. Threat safely neutralized."
+        },
+        {
+          "id": "opt-3",
+          "text": "Download the PDF and open it in Adobe Reader",
+          "isCorrect": false,
+          "consequence": "Opening unsolicited attachments can execute hidden macros or malware scripts on your device.",
+          "whatYouMissed": [
+            "Unsolicited attachments often contain malicious exploits"
+          ]
+        }
+      ],
+      "explanation": "Attackers love tempting topics like payroll, bonuses, or disciplinary notices to bait curiosity. Real cloud sharing notifications show up in your cloud drive under \"Shared with me\".",
+      "hint": "Curiosity lures are common. Can you verify shared files without touching email links?"
+    },
+    {
+      "id": "phish-04",
+      "title": "Bank Wire Transfer Fraud Alert",
+      "category": "phishing",
+      "categoryLabel": "Phishing Hunter",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "email",
+      "scenario": {
+        "sender": "Chase Security Fraud Department",
+        "senderAddress": "alerts@chase-fraud-prevention-alert.com",
+        "subject": "Notice: $1,420.00 Zelle Transfer Pending Approval",
+        "timestamp": "Today at 02:14 PM",
+        "body": "Did you authorize a $1,420.00 payment to \"CRYPTO_EXCHANGE_LLC\"? If not, click CANCEL TRANSFER now or call 1-800-FAKE-NUM within 15 minutes to dispute this transaction.",
+        "attachmentOrUrl": "https://chase-fraud-prevention-alert.com/cancel-payment",
+        "contextNote": "You definitely did not send $1,420 to any crypto exchange."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Click CANCEL TRANSFER to stop the money from leaving your bank",
+          "isCorrect": false,
+          "consequence": "The fake cancellation page would prompt you to enter your debit card number, PIN, and CVV to \"verify identity\".",
+          "whatYouMissed": [
+            "High fear factor manipulation",
+            "Unofficial domain mimicking Chase",
+            "Real banks do not require entering payment credentials to cancel fraud"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Call the phone number provided in the body of the email",
+          "isCorrect": false,
+          "consequence": "The phone number connects to a fraudulent call center ready to extract your OTP and online banking password.",
+          "whatYouMissed": [
+            "Scammers set up fake customer service numbers specifically to conduct phone phishing (vishing)"
+          ]
+        },
+        {
+          "id": "opt-3",
+          "text": "Log into your banking app directly or call the number on the back of your debit card",
+          "isCorrect": true,
+          "consequence": "Spot-on! Checking your real bank app reveals no pending transaction, confirming this was a phishing scare tactic."
+        }
+      ],
+      "explanation": "Scareware emails use large monetary amounts so panic overrides judgment. Never dial numbers or click links inside unexpected fraud alerts; use the official number on your physical bank card.",
+      "hint": "Where is the safest place to find your bank’s real customer service telephone number?"
+    },
+    {
+      "id": "phish-05",
+      "title": "Streaming Service Subscription Renewal Glitch",
+      "category": "phishing",
+      "categoryLabel": "Phishing Hunter",
+      "difficulty": "Hard",
+      "xpReward": 200,
+      "scenarioType": "email",
+      "scenario": {
+        "sender": "Netflix Billing",
+        "senderAddress": "billing-update@netflix.com.accounts-secure-portal.info",
+        "subject": "Payment declined: Update billing method to avoid service interruption",
+        "timestamp": "Yesterday at 09:20 PM",
+        "body": "We were unable to process your monthly membership payment. Please update your credit card details within 24 hours to keep streaming your favorite shows.",
+        "attachmentOrUrl": "https://netflix.com.accounts-secure-portal.info/update-card",
+        "contextNote": "The email layout has high-resolution Netflix branding and logos."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Click the link and re-enter your credit card information",
+          "isCorrect": false,
+          "consequence": "Your credit card details and billing address would be stolen and sold on dark web forums.",
+          "whatYouMissed": [
+            "Subdomain spoofing trick: netflix.com is just a subdomain of the real domain accounts-secure-portal.info",
+            "Professional logos can be easily copied by cyber criminals"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Open the Netflix app on your smart TV or phone and check Account Settings",
+          "isCorrect": true,
+          "consequence": "Masterful detection! You recognized subdomain trickery and verified through your active streaming app."
+        },
+        {
+          "id": "opt-3",
+          "text": "Forward the message to friends asking if their Netflix is also down",
+          "isCorrect": false,
+          "consequence": "Waste of time that leaves the attack unreported.",
+          "whatYouMissed": [
+            "Account billing issues are individual, not global outages"
+          ]
+        }
+      ],
+      "explanation": "Attackers frequently use subdomain manipulation (e.g., brand.com.evil-domain.com) so the first part looks legitimate at a glance. Always read the domain from right to left before the first slash.",
+      "hint": "Look closely at the very end of the sender domain right before .info."
+    },
+    {
+      "id": "soc-01",
+      "title": "The Urgent IT Helpdesk Verification Code",
+      "category": "social_engineering",
+      "categoryLabel": "Social Engineering",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "chat",
+      "scenario": {
+        "sender": "David from Tech Support",
+        "timestamp": "Just now",
+        "body": "Hey! This is David from the campus IT infrastructure team. We are migrating servers right now and your profile is locked in a retry loop. A 6-digit verification code was just sent to your phone. Can you read it to me quickly so I can finish the migration before the system shuts you out?",
+        "contextNote": "A real SMS with a 6-digit authentication code just popped up on your mobile device."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Share the 6-digit code quickly to avoid being locked out",
+          "isCorrect": false,
+          "consequence": "Account takeover! You gave away your Multi-Factor Authentication (MFA) OTP to an attacker who already had your password.",
+          "whatYouMissed": [
+            "Real IT personnel will NEVER ask for your one-time passcode",
+            "The SMS itself explicitly says \"Never share this code with anyone\"",
+            "Urgency used to bypass rational caution"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Refuse to share the code and report the interaction to the official IT desk",
+          "isCorrect": true,
+          "consequence": "Protected! You preserved your 2FA barrier and prevented unauthorized account takeover."
+        },
+        {
+          "id": "opt-3",
+          "text": "Ask David to prove his identity by telling you your student ID number",
+          "isCorrect": false,
+          "consequence": "Student IDs and names are often public directory information; this gives false confidence to an attacker.",
+          "whatYouMissed": [
+            "Basic public information does not authenticate identity"
+          ]
+        }
+      ],
+      "explanation": "One-Time Passwords (OTPs) are meant exclusively for your eyes. Legitimate support staff have administrative tools and will NEVER require your MFA codes.",
+      "hint": "What does the standard 2FA SMS message always say about sharing the code?"
+    },
+    {
+      "id": "soc-02",
+      "title": "The Executive Request for Confidential Gift Cards",
+      "category": "social_engineering",
+      "categoryLabel": "Social Engineering",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "chat",
+      "scenario": {
+        "sender": "CEO Marcus Vance (via WhatsApp)",
+        "timestamp": "Today at 01:10 PM",
+        "body": "Hi, are you at your desk? I am stuck in an all-day executive board meeting and cannot take calls. I need you to quietly purchase 5x $100 Apple gift cards for a client presentation right now. Scratch the backs and send me the PIN photos. I will reimburse you with company expense tomorrow.",
+        "contextNote": "The sender profile has the CEO photo taken from the company website."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Buy the gift cards promptly to impress the CEO",
+          "isCorrect": false,
+          "consequence": "Classic CEO Fraud (Business Email Compromise). You would lose $500 of personal money with zero possibility of recovery.",
+          "whatYouMissed": [
+            "Authority pressure and artificial confidentiality (\"keep this quiet\")",
+            "Requesting non-traceable gift cards for business expenses",
+            "Unverified phone number outside corporate channels"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Verify the request through the CEO’s executive assistant or internal corporate chat",
+          "isCorrect": true,
+          "consequence": "Disaster averted! The CEO’s assistant confirmed Marcus is at lunch and never made this request."
+        },
+        {
+          "id": "opt-3",
+          "text": "Ask the sender if Google Play gift cards would work instead",
+          "isCorrect": false,
+          "consequence": "Still falling for the scam by negotiating payment method with an impersonator.",
+          "whatYouMissed": [
+            "The entire premise is fraudulent regardless of card brand"
+          ]
+        }
+      ],
+      "explanation": "Gift cards are non-refundable and untraceable, making them the #1 weapon of impersonation scammers. Legitimate corporations have procurement processes and never purchase supplies via employee gift card photos.",
+      "hint": "Why would an executive demand untraceable gift cards over standard company purchase orders?"
+    },
+    {
+      "id": "soc-03",
+      "title": "The Friendly Stranger Tailgating at the Office Gate",
+      "category": "social_engineering",
+      "categoryLabel": "Social Engineering",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "dialog",
+      "scenario": {
+        "sender": "Delivery Courier in Uniform",
+        "timestamp": "Morning at building entrance",
+        "body": "You swipe your RFID badge to enter the secure corporate engineering floor. A person wearing high-vis clothing carrying two heavy cardboard boxes jogs up right behind you and says: \"Hey buddy, mind catching the door? My hands are full with the catering order!\"",
+        "contextNote": "The door has a sign: \"RESTRICTED ACCESS. NO TAILGATING. BADGE EVERY TIME.\""
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Hold the door open politely so they don’t drop the boxes",
+          "isCorrect": false,
+          "consequence": "Physical security breach! The intruder gains unescorted access to server rooms and employee workstations.",
+          "whatYouMissed": [
+            "Social engineering leverages natural human politeness",
+            "Physical security depends on every visitor checking in at the front desk"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Politely let the door close and direct them to the reception desk to sign in",
+          "isCorrect": true,
+          "consequence": "Strong physical defense! Security protocol was preserved without being rude."
+        },
+        {
+          "id": "opt-3",
+          "text": "Take their boxes, bring them inside yourself, and leave the person outside",
+          "isCorrect": false,
+          "consequence": "Bringing unidentified packages into restricted spaces violates security policy.",
+          "whatYouMissed": [
+            "Unverified packages must be processed through shipping/receiving"
+          ]
+        }
+      ],
+      "explanation": "Tailgating relies on human social conditioning against being \"rude\". Polite adherence to badge policies protects everyone inside the building.",
+      "hint": "Physical security is the first line of cyber defense. Should anyone bypass badge readers?"
+    },
+    {
+      "id": "soc-04",
+      "title": "LinkedIn Recruiter Offering Dream Tech Job",
+      "category": "social_engineering",
+      "categoryLabel": "Social Engineering",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "chat",
+      "scenario": {
+        "sender": "Sarah Jenkins - Senior Talent Partner at Global AI Labs",
+        "timestamp": "Yesterday at 05:40 PM",
+        "body": "Hi! Your background in web applications is exceptional. We want to fast-track you for a remote position ($140k/yr). To prepare for the technical interview, please clone and run our private coding challenge repo from this zipped package: \"GlobalAILabs_TechTest_Setup.exe\".",
+        "contextNote": "Her LinkedIn profile has 12 connections and was created last week."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Download and run the .exe file right away to prepare for the interview",
+          "isCorrect": false,
+          "consequence": "Trojan infection! The executable installs info-stealing malware targeting browser cookies, session tokens, and crypto wallets.",
+          "whatYouMissed": [
+            "Brand new profile with minimal network connections",
+            "Sending executable files (.exe) disguised as coding tests",
+            "Flattery and unrealistically high salary bait"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Research the company career portal independently and decline running untrusted executables",
+          "isCorrect": true,
+          "consequence": "Brilliant defense! Legitimate technical evaluations run on platforms like HackerRank or LeetCode, never mystery executables."
+        },
+        {
+          "id": "opt-3",
+          "text": "Send her your home address and social security number for background checks first",
+          "isCorrect": false,
+          "consequence": "Identity theft! Handing personal identifiers to an unvetted recruiter.",
+          "whatYouMissed": [
+            "Identity information should only be provided after formal accepted offers through official HR portals"
+          ]
+        }
+      ],
+      "explanation": "Fake recruiter campaigns frequently target developers with malicious project repositories or setup executables designed to steal API keys and developer credentials.",
+      "hint": "Why would a coding test come as an executable (.exe) instead of code or an online test platform?"
+    },
+    {
+      "id": "soc-05",
+      "title": "The Panicked Coworker Needing Client Files",
+      "category": "social_engineering",
+      "categoryLabel": "Social Engineering",
+      "difficulty": "Hard",
+      "xpReward": 200,
+      "scenarioType": "chat",
+      "scenario": {
+        "sender": "Elena Rostova (Slack Direct Message)",
+        "timestamp": "11:45 PM on a Friday",
+        "body": "I am so sorry to ping you this late! I am stuck at the client airport and the VP of Sales needs the unredacted customer credit card ledger right this minute or we lose the multimillion dollar deal. My VPN key expired, please email the CSV to my personal Gmail so I can upload it!",
+        "contextNote": "Sending unencrypted client payment records violates PCI-DSS regulations."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Email the file to her personal Gmail to save the company deal",
+          "isCorrect": false,
+          "consequence": "Severe regulatory breach! Sending sensitive customer financial data to an external personal email violates data protection laws.",
+          "whatYouMissed": [
+            "High emotional pressure during off-hours",
+            "Circumventing enterprise access controls (VPN)",
+            "Exfiltrating regulated data to personal unmanaged inboxes"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Refuse the exfiltration and direct her to emergency IT on-call for VPN restoration",
+          "isCorrect": true,
+          "consequence": "Compliance and security champion! You prevented severe data exposure and adhered to compliance protocols."
+        },
+        {
+          "id": "opt-3",
+          "text": "Post the credit card file into a public Slack channel for visibility",
+          "isCorrect": false,
+          "consequence": "Disastrous data leak exposing customer financial records across the entire company.",
+          "whatYouMissed": [
+            "Never publish confidential ledgers in shared channels"
+          ]
+        }
+      ],
+      "explanation": "Late-night urgency and fear of \"losing a deal\" are psychological tactics used to pressure employees into bypassing data protection safeguards.",
+      "hint": "Never bypass established data protection protocols, regardless of who claims urgency."
+    },
+    {
+      "id": "scam-01",
+      "title": "The Viral Crypto Investment Multiplier Bot",
+      "category": "scam",
+      "categoryLabel": "Scam Detector",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "chat",
+      "scenario": {
+        "sender": "Telegram Channel: Quantum Wealth Matrix",
+        "timestamp": "Today at 10:00 AM",
+        "body": "🚀 GUARANTEED 350% RETURN IN 24 HOURS! Our AI Arbitrage Trading Bot exploits flash liquidity pools with 0% risk. Send 0.1 ETH ($320) to deposit address and receive 0.45 ETH automatically back in your wallet by tomorrow evening. Over 10,000 satisfied investors!",
+        "contextNote": "The channel comments feature screenshots of luxury cars and fake transaction hashes."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Send 0.1 ETH to test with a small amount first",
+          "isCorrect": false,
+          "consequence": "Funds permanently lost! In blockchain transactions, once sent to a scam wallet, funds can never be reversed.",
+          "whatYouMissed": [
+            "\"Guaranteed return\" in finance is always a red flag",
+            "Zero-risk claims are mathematically impossible in trading",
+            "Ponzi/advance-fee investment scheme"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Recognize this as an advance-fee crypto scam and block/report the channel",
+          "isCorrect": true,
+          "consequence": "Protected! You recognized the hallmarks of high-yield investment fraud and kept your hard-earned money safe."
+        },
+        {
+          "id": "opt-3",
+          "text": "Share the link with your family so they can make money too",
+          "isCorrect": false,
+          "consequence": "You would drag your family into a scam, destroying both finances and trust.",
+          "whatYouMissed": [
+            "Scams spread when victims unintentionally evangelize fake promises"
+          ]
+        }
+      ],
+      "explanation": "Any financial scheme guaranteeing triple-digit returns with zero risk is 100% fraudulent. Real investments fluctuate, and legitimate trading algorithms never ask for blind wallet transfers.",
+      "hint": "Is any investment legally permitted to guarantee 350% overnight profit with zero risk?"
+    },
+    {
+      "id": "scam-02",
+      "title": "The Unclaimed Mystery Parcel Delivery Fee",
+      "category": "scam",
+      "categoryLabel": "Scam Detector",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "chat",
+      "scenario": {
+        "sender": "SMS from +1-839-440-2191",
+        "timestamp": "Today at 03:12 PM",
+        "body": "USPS Notice: Your package could not be delivered due to an incomplete street address. Pay a $1.85 redelivery processing fee within 12 hours or package will be returned to sender: https://usps-parcel-track-update.icu/fee",
+        "contextNote": "You did order some clothes online a week ago."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Pay the $1.85 fee because it’s so cheap and you want your package",
+          "isCorrect": false,
+          "consequence": "Card skimmer snare! The $1.85 is a decoy to steal full card details and initiate recurring hidden $89.99 monthly charges.",
+          "whatYouMissed": [
+            "Cheap nominal fee trick to lower victim defense",
+            "Suspicious .icu domain (official USPS is always usps.com)",
+            "Postal services do not demand payments via random SMS links"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Open the carrier’s official website manually and track using your original retailer tracking number",
+          "isCorrect": true,
+          "consequence": "Accurate deduction! Checking your actual tracking code showed the package was already safely on the delivery truck with correct address."
+        },
+        {
+          "id": "opt-3",
+          "text": "Text back your credit card number in the SMS reply",
+          "isCorrect": false,
+          "consequence": "Direct card theft via unencrypted SMS channel.",
+          "whatYouMissed": [
+            "Never transmit payment credentials over SMS"
+          ]
+        }
+      ],
+      "explanation": "Smishing package scams rely on the fact that millions of people are awaiting deliveries at any given time. Postal services never require micro-fee credit card payments to resolve address issues.",
+      "hint": "Check the domain name in the link (.icu vs official postal domain)."
+    },
+    {
+      "id": "scam-03",
+      "title": "Work-From-Home Mystery Shopper Check Scam",
+      "category": "scam",
+      "categoryLabel": "Scam Detector",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "email",
+      "scenario": {
+        "sender": "Apex Retail Evaluation Services",
+        "senderAddress": "jobs@apex-mystery-evaluators.biz",
+        "subject": "Congratulations: You are selected as a Secret Evaluator!",
+        "timestamp": "2 days ago",
+        "body": "We mailed you a certified cashier’s check for $2,850. Deposit this check into your personal bank account. Keep $450 as your evaluation fee. Wire the remaining $2,400 via Western Union to purchase test items at Walmart within 48 hours.",
+        "contextNote": "A physical paper check arrived in your mailbox today."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Deposit the check and wire the $2,400 right away as instructed",
+          "isCorrect": false,
+          "consequence": "Overpayment check fraud! The bank initially shows temporary funds, but the fraudulent check bounces 5 days later. You owe the bank $2,400.",
+          "whatYouMissed": [
+            "Classic fake check overpayment scam",
+            "Banks are required by law to show provisional credit before checks fully clear",
+            "Wire transfers are irreversible once picked up"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Take the check to your bank fraud division or shred it without depositing",
+          "isCorrect": true,
+          "consequence": "Well played! You avoided a massive bank overdraft and fraud mark on your account."
+        },
+        {
+          "id": "opt-3",
+          "text": "Spend the $450 immediately before doing the assignment",
+          "isCorrect": false,
+          "consequence": "When the check bounces, your account balance plunges into the negative and fees apply.",
+          "whatYouMissed": [
+            "The entire check is counterfeit"
+          ]
+        }
+      ],
+      "explanation": "Fake check scams exploit the delay between provisional bank credit and final bank clearing (which can take 7–14 days). Never send real money in exchange for a stranger’s deposited check.",
+      "hint": "Why would an employer send you thousands of dollars and ask you to send it back via Western Union?"
+    },
+    {
+      "id": "scam-04",
+      "title": "Fake Tech Support Pop-Up Freezing the Browser",
+      "category": "scam",
+      "categoryLabel": "Scam Detector",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "browser",
+      "scenario": {
+        "urlDomain": "windows-alert-critical-virus09.live",
+        "securityFlags": [
+          "UNTRUSTED CERTIFICATE",
+          "FULLSCREEN LOCK"
+        ],
+        "body": "⚠️ CRITICAL ALERT: ZEUS VIRUS DETECTED ON SYSTEM 32!\nYour hard drive will be encrypted in 5 minutes.\nCall Microsoft Certified Engineers immediately at: 1-888-555-0199.\nDO NOT RESTART COMPUTER.",
+        "contextNote": "A loud audio beep is looping through your speakers and the page refuses to close with the mouse."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Call the telephone number on the screen to remove the virus",
+          "isCorrect": false,
+          "consequence": "Tech support scam! The fake technician will charge you $499 and install remote access software (AnyDesk/TeamViewer) to steal your banking logins.",
+          "whatYouMissed": [
+            "Microsoft or Apple never put phone numbers in system alerts",
+            "Browser websites cannot scan your local hard drive for viruses",
+            "Audio beeps and fullscreen lock are simple JavaScript tricks"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Force-close the browser via Task Manager / Activity Monitor and clear browser cache",
+          "isCorrect": true,
+          "consequence": "Clean escape! The scam page closed instantly, no infection existed, and you spent zero dollars."
+        },
+        {
+          "id": "opt-3",
+          "text": "Enter your debit card details on the page to buy the suggested cleaner software",
+          "isCorrect": false,
+          "consequence": "You bought useless scareware while compromising your payment card.",
+          "whatYouMissed": [
+            "The alert was fabricated inside a standard browser tab"
+          ]
+        }
+      ],
+      "explanation": "Scam websites use JavaScript fullscreen loops and loud sounds to terrify users into calling fake call centers. A web browser cannot detect viruses on your operating system.",
+      "hint": "Can a website inside a browser tab actually know what is inside your system files?"
+    },
+    {
+      "id": "scam-05",
+      "title": "The Overpaid Marketplace Buyer Requesting Zelle Refund",
+      "category": "scam",
+      "categoryLabel": "Scam Detector",
+      "difficulty": "Hard",
+      "xpReward": 200,
+      "scenarioType": "chat",
+      "scenario": {
+        "sender": "Facebook Marketplace Buyer: \"Tom\"",
+        "timestamp": "Today at 04:00 PM",
+        "body": "Hey, I want your used camera listed for $200. I just sent $500 by accident through Zelle business! Look at this email screenshot from Zelle showing the $500 held in escrow. Please refund the extra $300 to my brother’s account right now so I can send the courier to pick up the camera.",
+        "contextNote": "You checked your own bank app and no $500 has arrived in your account."
+      },
+      "question": "What would you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Send the $300 refund immediately since you saw the Zelle screenshot",
+          "isCorrect": false,
+          "consequence": "Zelle business upgrade scam! The screenshot was photoshopped. You sent $300 of your own real money and will never see the buyer.",
+          "whatYouMissed": [
+            "Screenshots of payments are trivial to forge",
+            "Zelle does not have an \"escrow\" or \"business account upgrade fee\"",
+            "If funds are not in your bank app, the payment does not exist"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Refuse any refund until funds show as settled inside your actual banking app",
+          "isCorrect": true,
+          "consequence": "Masterful caution! You recognized the fake payment proof trick and blocked the scammer."
+        },
+        {
+          "id": "opt-3",
+          "text": "Hand over the camera to the courier without checking anything else",
+          "isCorrect": false,
+          "consequence": "You lost both your camera and money with no payment received.",
+          "whatYouMissed": [
+            "Physical goods should never be released without confirmed receipt of funds"
+          ]
+        }
+      ],
+      "explanation": "Never trust payment confirmations sent by a buyer (emails, screenshots, text receipts). Trust ONLY the official balance displayed inside your personal banking portal.",
+      "hint": "Why should you trust your own bank app balance over a screenshot provided by a stranger?"
+    },
+    {
+      "id": "pwd-01",
+      "title": "Selecting a Resilient Master Password",
+      "category": "password",
+      "categoryLabel": "Password Guardian",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "dialog",
+      "scenario": {
+        "body": "You are setting up a master password for a password manager that holds all your financial, academic, and personal credentials. Which approach creates the most secure yet memorable passphrase?",
+        "contextNote": "Modern password cracking uses high-speed GPU dictionary and pattern guessing attacks."
+      },
+      "question": "Which of the following master passwords is the most secure?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "P@ssw0rd2024!",
+          "isCorrect": false,
+          "consequence": "Cracked in 3 seconds! Predictable leetspeak substitutions (@ for a, 0 for o) and year endings are in every standard hacker wordlist.",
+          "whatYouMissed": [
+            "Obvious substitutions are already precomputed in cracking rainbow tables",
+            "Short character length"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Velvet-Bicycle-Galaxy-Pancake-42!",
+          "isCorrect": true,
+          "consequence": "Fortress defense! A long multi-word passphrase (30+ characters) provides astronomical entropy against brute force and is easy to memorize."
+        },
+        {
+          "id": "opt-3",
+          "text": "Qwerty123456#",
+          "isCorrect": false,
+          "consequence": "Cracked instantly! Keyboard walking patterns are tested first in cracking tools.",
+          "whatYouMissed": [
+            "Keyboard sequences are trivial for automated tools"
+          ]
+        },
+        {
+          "id": "opt-4",
+          "text": "MyDogNameBuddy1",
+          "isCorrect": false,
+          "consequence": "Easily guessed by social engineering or scraping your public social media pet photos.",
+          "whatYouMissed": [
+            "Personal details make weak passwords"
+          ]
+        }
+      ],
+      "explanation": "Length beats complexity! A passphrase made of 4-5 unrelated random words creates enormous cryptographic entropy while remaining human-memorable without weak leetspeak tricks.",
+      "hint": "Think about length and random word combinations versus predictable keyboard patterns."
+    },
+    {
+      "id": "pwd-02",
+      "title": "The Danger of Password Reuse Across Services",
+      "category": "password",
+      "categoryLabel": "Password Guardian",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "dialog",
+      "scenario": {
+        "body": "A small hobby gaming forum you registered for 3 years ago suffers a database breach, dumping 50,000 email/password pairs onto paste sites. You used the same password on your primary email, banking portal, and college login.",
+        "contextNote": "Credential stuffing bots automatically test breached username/password pairs against hundreds of popular web services within minutes."
+      },
+      "question": "What is the immediate best course of action?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Do nothing because the forum has nothing valuable on it",
+          "isCorrect": false,
+          "consequence": "Compromised! Automated credential stuffing scripts test your leaked password against Google, Amazon, and banks within hours.",
+          "whatYouMissed": [
+            "Breaches of minor sites compromise high-value accounts when passwords are reused"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Immediately change passwords on all reused services to unique ones and enable 2FA",
+          "isCorrect": true,
+          "consequence": "Swift containment! You cut off credential stuffing bots and secured your vital accounts with unique credentials."
+        },
+        {
+          "id": "opt-3",
+          "text": "Just change the password on the gaming forum only",
+          "isCorrect": false,
+          "consequence": "Too late! The leaked password is already saved in adversary databases and will unlock your email.",
+          "whatYouMissed": [
+            "Your other accounts still hold the compromised password"
+          ]
+        }
+      ],
+      "explanation": "Password reuse is the single biggest enabler of credential stuffing. When one obscure website is breached, all your accounts sharing that password become vulnerable.",
+      "hint": "If a thief gets a key that unlocks multiple doors, which locks must you change?"
+    },
+    {
+      "id": "pwd-03",
+      "title": "Evaluating Multi-Factor Authentication (MFA) Methods",
+      "category": "password",
+      "categoryLabel": "Password Guardian",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "dialog",
+      "scenario": {
+        "body": "You are configuring 2-Factor Authentication for your primary cloud email account. The provider gives you three options: SMS text codes, Authenticator App (TOTP), or Hardware Security Key (FIDO2/WebAuthn).",
+        "contextNote": "SIM-swapping attacks and adversary-in-the-middle phishing proxies can intercept certain 2FA methods."
+      },
+      "question": "Ranked by resistance to modern phishing attacks, which method provides the highest security?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "SMS text message OTP",
+          "isCorrect": false,
+          "consequence": "SMS is vulnerable to SIM-swap fraud, SS7 interception, and real-time reverse proxy phishing pages.",
+          "whatYouMissed": [
+            "SMS is the least secure MFA method (though still better than no MFA)"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Hardware Security Key (FIDO2/WebAuthn / YubiKey)",
+          "isCorrect": true,
+          "consequence": "Gold standard! Hardware keys use cryptographic origin-bound challenge-response, making phishing and man-in-the-middle attacks mathematically impossible."
+        },
+        {
+          "id": "opt-3",
+          "text": "Security questions (e.g., \"What was your first car?\")",
+          "isCorrect": false,
+          "consequence": "Security questions are static, easily found on public records or social media, and are not true 2FA.",
+          "whatYouMissed": [
+            "Security questions offer virtually zero protection against targeted research"
+          ]
+        }
+      ],
+      "explanation": "Hardware security keys (FIDO2/WebAuthn) cryptographically bind authentication to the exact domain in your browser address bar, stopping fake phishing sites from stealing session tokens.",
+      "hint": "Which technology binds your cryptographic credentials directly to the genuine website origin?"
+    },
+    {
+      "id": "pwd-04",
+      "title": "The Sticky Note on the Laptop Monitor",
+      "category": "password",
+      "categoryLabel": "Password Guardian",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "dialog",
+      "scenario": {
+        "body": "In your university library or shared workspace, you notice people frequently write their passwords on sticky notes attached to their monitors, or save a plain text file named \"passwords.txt\" on their desktop.",
+        "contextNote": "Physical snooping and malware stealer scripts frequently scan desktops for files named passwords.txt or credentials.xlsx."
+      },
+      "question": "What is the recommended, industry-standard solution?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Store passwords in a dedicated, end-to-end encrypted password manager",
+          "isCorrect": true,
+          "consequence": "Protected! Password managers encrypt vaults using AES-256 and generate unique, complex passwords for every single site."
+        },
+        {
+          "id": "opt-2",
+          "text": "Hide the sticky note under the keyboard instead",
+          "isCorrect": false,
+          "consequence": "Anyone cleaning or sharing your desk can easily discover physical notes.",
+          "whatYouMissed": [
+            "Physical hiding spots are predictable and vulnerable"
+          ]
+        },
+        {
+          "id": "opt-3",
+          "text": "Rename the file to \"homework.txt\" to trick malware",
+          "isCorrect": false,
+          "consequence": "Information stealers search inside all .txt files for strings matching \"password:\" or \"login:\".",
+          "whatYouMissed": [
+            "Malware scans file contents, not just filenames"
+          ]
+        }
+      ],
+      "explanation": "Password managers eliminate the mental burden of remembering dozens of passwords while keeping credentials encrypted behind a single strong master passphrase with 2FA.",
+      "hint": "What tool encrypts your credentials and auto-fills them securely?"
+    },
+    {
+      "id": "pwd-05",
+      "title": "MFA Fatigue / Push Bombing Attack",
+      "category": "password",
+      "categoryLabel": "Password Guardian",
+      "difficulty": "Hard",
+      "xpReward": 200,
+      "scenarioType": "chat",
+      "scenario": {
+        "sender": "Authenticator Push Notification System",
+        "timestamp": "03:15 AM - Repeating every 20 seconds",
+        "body": "🔔 \"Are you trying to log into Microsoft 365?\" [APPROVE] / [DENY]\n🔔 \"Are you trying to log into Microsoft 365?\" [APPROVE] / [DENY]\n🔔 \"Are you trying to log into Microsoft 365?\" [APPROVE] / [DENY]",
+        "contextNote": "You were asleep and are definitely not trying to log into work at 3 AM."
+      },
+      "question": "What is happening and what should you do?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Tap APPROVE just to stop the annoying phone buzzing and go back to sleep",
+          "isCorrect": false,
+          "consequence": "Breach! You fell for an MFA fatigue attack. The attacker gained immediate access to your corporate network.",
+          "whatYouMissed": [
+            "Push bombing relies on wearing down user patience until they approve",
+            "Approving grants the attacker active session tokens"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "DENY the prompt, report fraudulent activity, and immediately change your password",
+          "isCorrect": true,
+          "consequence": "Outstanding defense! An attacker had your password and was trying to push through 2FA. Changing your password locked them out."
+        },
+        {
+          "id": "opt-3",
+          "text": "Put your phone on Do Not Disturb and check it tomorrow afternoon",
+          "isCorrect": false,
+          "consequence": "Ignoring it leaves an attacker who already possesses your password actively probing your account.",
+          "whatYouMissed": [
+            "A prompt explosion means your primary password has already been compromised"
+          ]
+        }
+      ],
+      "explanation": "MFA fatigue attacks happen when an attacker has your password and bombards your device with push notifications hoping you hit \"Approve\" out of frustration or half-asleep confusion. Always Deny and reset your password.",
+      "hint": "If you receive unexpected MFA pushes, what does the attacker already have?"
+    },
+    {
+      "id": "priv-01",
+      "title": "The Public Vacation Boarding Pass Photo",
+      "category": "privacy",
+      "categoryLabel": "Privacy Defender",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "profile",
+      "scenario": {
+        "body": "Your friend posts a high-resolution photo on Instagram: \"Off to Tokyo for 3 weeks! ✈️🇯🇵\" holding their physical airline boarding pass clearly showing their full name, flight number, booking reference (PNR code), and barcode.",
+        "contextNote": "Airline barcodes and 6-character PNR codes store sensitive passenger itinerary and passport data."
+      },
+      "question": "What privacy risks are present in this post?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "None, boarding passes are public records anyway",
+          "isCorrect": false,
+          "consequence": "Incorrect! Strangers can use the PNR code and name on the airline portal to view passport details, change seat, or cancel the flight.",
+          "whatYouMissed": [
+            "PNR codes grant full access to airline reservation management",
+            "Announcing home is empty for 3 weeks invites burglary"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "The booking code allows identity snooping, and broadcasting an empty home increases burglary risk",
+          "isCorrect": true,
+          "consequence": "Sharp eyes! Anyone can read barcode data using free mobile scanners and manipulate airline bookings."
+        },
+        {
+          "id": "opt-3",
+          "text": "Only risk is that friends will be jealous of the Tokyo trip",
+          "isCorrect": false,
+          "consequence": "Overlooking serious privacy exposures.",
+          "whatYouMissed": [
+            "Barcode scanning reveals frequent flyer numbers and contact info"
+          ]
+        }
+      ],
+      "explanation": "Boarding pass barcodes and PNR codes contain passenger data that can be used on airline websites to access passport numbers, seat assignments, and even cancel flights. Never post unredacted tickets.",
+      "hint": "What information does an airline website ask for to manage your flight reservation?"
+    },
+    {
+      "id": "priv-02",
+      "title": "Mobile App Demanding Excessive Permissions",
+      "category": "privacy",
+      "categoryLabel": "Privacy Defender",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "dialog",
+      "scenario": {
+        "body": "You install a simple \"Flashlight & Torch\" app from an app store. Upon launch, it prompts for the following permissions:\n• Camera (for LED flash)\n• Precise GPS Location (All the time)\n• Read Contacts List\n• Read SMS & Call Logs",
+        "contextNote": "A flashlight tool only needs access to the device camera LED flash hardware."
+      },
+      "question": "How should you respond to these permission requests?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Grant all permissions because app developers need data to keep apps free",
+          "isCorrect": false,
+          "consequence": "Data harvest! The app sells your real-time location and phone contacts to third-party ad brokers and data aggregators.",
+          "whatYouMissed": [
+            "Data harvesting spyware disguised as utility apps",
+            "Principle of least privilege was violated"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Deny contacts, location, and SMS, or uninstall the app and use the native system flashlight",
+          "isCorrect": true,
+          "consequence": "Privacy secured! Modern phones have built-in flashlights, and no utility tool should snoop on your contacts."
+        },
+        {
+          "id": "opt-3",
+          "text": "Grant permissions only while sleeping",
+          "isCorrect": false,
+          "consequence": "Apps with background permissions transmit cached data continuously.",
+          "whatYouMissed": [
+            "Background permissions sync data whenever network is available"
+          ]
+        }
+      ],
+      "explanation": "Follow the Principle of Least Privilege: only grant permissions strictly necessary for core functionality. Any flashlight app asking for contacts and SMS logs is gathering personal data for monetization.",
+      "hint": "Does shining a light on a phone require reading your address book?"
+    },
+    {
+      "id": "priv-03",
+      "title": "The Viral Social Media Birthday & Pet Name Quiz",
+      "category": "privacy",
+      "categoryLabel": "Privacy Defender",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "profile",
+      "scenario": {
+        "body": "A viral challenge post on Facebook asks: \"Find your Superhero Name! 🦸‍♂️\n• Your childhood street name\n• Your mother’s maiden name\n• Your birth month & day\nComment below to discover your hero identity!\"",
+        "contextNote": "Over 4,000 users have commented their combinations in public replies."
+      },
+      "question": "What is the hidden objective of this viral game?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "It is just harmless algorithmic entertainment for communities",
+          "isCorrect": false,
+          "consequence": "Social profiling trap! You publicly shared the exact answers to common account security questions.",
+          "whatYouMissed": [
+            "Social engineering quizzes harvest account recovery answers",
+            "Data scrapers catalog user profiles with security question answers"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "It is an OSINT reconnaissance technique to harvest answers to common password security questions",
+          "isCorrect": true,
+          "consequence": "Brilliant deduction! Mother’s maiden name and first street are classic banking security questions."
+        },
+        {
+          "id": "opt-3",
+          "text": "To test which superheroes are most popular among users",
+          "isCorrect": false,
+          "consequence": "Falling for social profiling games.",
+          "whatYouMissed": [
+            "The questions are identical to bank reset questions"
+          ]
+        }
+      ],
+      "explanation": "Viral \"games\" that ask for your birth year, mother’s maiden name, elementary school, or first pet are social engineering honeypots designed to scrape security question answers.",
+      "hint": "Think about what banks ask you when you click \"Forgot Password\"."
+    },
+    {
+      "id": "priv-04",
+      "title": "Oversharing Student ID and Badge Photos",
+      "category": "privacy",
+      "categoryLabel": "Privacy Defender",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "profile",
+      "scenario": {
+        "body": "A proud freshman posts a selfie on social media holding their new college student ID badge: \"Officially a student! 🎉\" The photo clearly shows their full legal name, student ID number, date of birth, barcode, and campus department.",
+        "contextNote": "The university library and exam systems use student ID numbers and birthdates as default temporary passwords."
+      },
+      "question": "What security impact does this photo create?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Anyone can clone the student ID barcode or use default credentials to hijack campus portal access",
+          "isCorrect": true,
+          "consequence": "Exactly right! Bad actors frequently use student ID photos to impersonate students in university systems."
+        },
+        {
+          "id": "opt-2",
+          "text": "No risk, student ID cards are intended to be seen by the public",
+          "isCorrect": false,
+          "consequence": "Underestimating credential harvesting risks on campus portals.",
+          "whatYouMissed": [
+            "Barcodes can be duplicated on mobile phone screens to open facility doors"
+          ]
+        },
+        {
+          "id": "opt-3",
+          "text": "The only risk is that people will know what major the student selected",
+          "isCorrect": false,
+          "consequence": "Ignoring personal identifier theft.",
+          "whatYouMissed": [
+            "Date of birth + Student ID number is sufficient to reset default college passwords"
+          ]
+        }
+      ],
+      "explanation": "ID badges contain barcodes that can be copied onto smartphones to open campus doors, plus key identifiers used to reset campus portal accounts. Always blur sensitive badge numbers before posting photos.",
+      "hint": "Can barcodes and ID numbers be used to authenticate access?"
+    },
+    {
+      "id": "priv-05",
+      "title": "Public Wi-Fi Network with No Password at the Coffee Shop",
+      "category": "privacy",
+      "categoryLabel": "Privacy Defender",
+      "difficulty": "Hard",
+      "xpReward": 200,
+      "scenarioType": "dialog",
+      "scenario": {
+        "body": "You are studying at an airport cafe. You open Wi-Fi settings and see two networks:\n1. \"Cafe_Free_HighSpeed_WiFi\" (Open, No Lock Icon)\n2. \"Airport_Official_Secure_5G\" (Requires captive portal login)",
+        "contextNote": "Attackers use portable Wi-Fi devices (Pineapple routers) to set up \"Evil Twin\" open hotspots that snoop on unencrypted traffic."
+      },
+      "question": "How should you safely connect your laptop?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Connect to Cafe_Free_HighSpeed_WiFi because open networks are fastest and easiest",
+          "isCorrect": false,
+          "consequence": "Evil Twin trap! An attacker operating the rogue access point can intercept DNS queries, spoof websites, and inspect unencrypted network packets.",
+          "whatYouMissed": [
+            "Rogue \"Evil Twin\" Wi-Fi networks mimic local venue names",
+            "Lack of encryption on open Wi-Fi exposes traffic"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Use mobile hotspot tethering from your phone, or connect via official Wi-Fi with an active VPN",
+          "isCorrect": true,
+          "consequence": "Ironclad privacy! A trusted VPN or cellular personal hotspot encrypts all transit traffic end-to-end."
+        },
+        {
+          "id": "opt-3",
+          "text": "Connect to the open Wi-Fi and log into your online bank to check your balance",
+          "isCorrect": false,
+          "consequence": "Extremely risky behavior on an untrusted public network.",
+          "whatYouMissed": [
+            "Never perform banking on untrusted public Wi-Fi without a VPN"
+          ]
+        }
+      ],
+      "explanation": "Unsecured public Wi-Fi allows anyone on the same radio frequency to snoop on DNS traffic and stage Man-in-the-Middle attacks. Use your smartphone cellular hotspot or an encrypted VPN tunnel.",
+      "hint": "What creates an encrypted tunnel between your device and the internet on untrusted networks?"
+    },
+    {
+      "id": "browse-01",
+      "title": "The Deceptive \"Green Padlock\" on a Suspicious Domain",
+      "category": "safe_browsing",
+      "categoryLabel": "Safe Browsing",
+      "difficulty": "Easy",
+      "xpReward": 100,
+      "scenarioType": "browser",
+      "scenario": {
+        "urlDomain": "https://secure-bank-login-update-auth.com",
+        "securityFlags": [
+          "HTTPS ENCRYPTED (VALID CERTIFICATE)"
+        ],
+        "body": "Welcome to Account Verification. Enter your Online Banking ID and Password to proceed with mandatory system upgrade.",
+        "contextNote": "The browser shows a secure padlock icon next to the address."
+      },
+      "question": "Does the padlock icon prove that this website is safe and legitimate?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Yes! The padlock means the site is officially verified and safe to enter banking info",
+          "isCorrect": false,
+          "consequence": "Common misconception! Anyone can get a free HTTPS certificate (Let’s Encrypt) for any fake domain. Your credentials are stolen over an encrypted connection to the hacker.",
+          "whatYouMissed": [
+            "HTTPS means the connection is encrypted, NOT that the site owner is trustworthy",
+            "Over 80% of phishing sites today use HTTPS"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "No. The padlock only means communication is encrypted; the domain itself is a phishing site",
+          "isCorrect": true,
+          "consequence": "Crucial cyber insight! You recognized that an encrypted connection to a scammer still delivers your password to the scammer."
+        },
+        {
+          "id": "opt-3",
+          "text": "Yes, as long as the page has a copyright symbol at the footer",
+          "isCorrect": false,
+          "consequence": "Anyone can paste a copyright symbol on a HTML page.",
+          "whatYouMissed": [
+            "Copyright notices have zero security value"
+          ]
+        }
+      ],
+      "explanation": "The padlock indicates HTTPS encryption between your browser and the web server, which prevents coffee shop eavesdroppers. However, it does NOT guarantee the web server belongs to your real bank!",
+      "hint": "Does encrypting the connection protect you if the person on the other end is a criminal?"
+    },
+    {
+      "id": "browse-02",
+      "title": "Spotting Homograph & Look-Alike Domains (IDN Spoofing)",
+      "category": "safe_browsing",
+      "categoryLabel": "Safe Browsing",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "browser",
+      "scenario": {
+        "urlDomain": "https://www.appIe.com/support/account-recovery",
+        "securityFlags": [
+          "LOOKS IDENTICAL TO APPLE.COM"
+        ],
+        "body": "Sign in with your Apple ID to reset your device passcode.",
+        "contextNote": "Look with extreme magnification at the letter \"I\" in appIe."
+      },
+      "question": "What is wrong with this website address?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Nothing, it is the official apple.com support portal",
+          "isCorrect": false,
+          "consequence": "Visual deception! The letter \"l\" was replaced with an uppercase \"I\" (appIe.com vs apple.com).",
+          "whatYouMissed": [
+            "Homoglyph attack using look-alike letters",
+            "Always type trusted domains manually or use stored bookmarks"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "It is a homoglyph spoofing attack substituting letter \"l\" with capital \"I\"",
+          "isCorrect": true,
+          "consequence": "Eagle eye! You noticed subtle typographic substitution and stopped credential theft."
+        },
+        {
+          "id": "opt-3",
+          "text": "The support subfolder is not supported on Apple servers",
+          "isCorrect": false,
+          "consequence": "Incorrect focus on the URL path rather than the spoofed host.",
+          "whatYouMissed": [
+            "The core domain itself is fraudulent"
+          ]
+        }
+      ],
+      "explanation": "Homoglyph attacks use similar-looking glyphs (like Cyrillic \"а\" for Latin \"a\", or uppercase \"I\" for lowercase \"l\") to trick users into believing they are visiting an authentic site.",
+      "hint": "Compare the letters in the domain name very carefully."
+    },
+    {
+      "id": "browse-03",
+      "title": "The Fake \"Update Your Chrome Browser\" Fullscreen Banner",
+      "category": "safe_browsing",
+      "categoryLabel": "Safe Browsing",
+      "difficulty": "Medium",
+      "xpReward": 150,
+      "scenarioType": "browser",
+      "scenario": {
+        "urlDomain": "media-stream-fast24.click/player",
+        "securityFlags": [
+          "UNTRUSTED ADVERTISING SCRIPT"
+        ],
+        "body": "⚠️ OUTDATED BROWSER DETECTED!\nTo play this HD video, your Google Chrome browser must be updated to version 124.\nClick below to download: \"Chrome_Setup_Update.exe\" (3.2 MB)",
+        "contextNote": "You visited a website searching for a live stream of a sports game."
+      },
+      "question": "How do genuine browser updates occur?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Download and run the provided Chrome_Setup_Update.exe file",
+          "isCorrect": false,
+          "consequence": "Malware dropper! The file is not a browser update; it is an infostealer that extracts saved passwords from your machine.",
+          "whatYouMissed": [
+            "Browsers update internally through official settings, never via random download files on third-party streaming sites",
+            "Fake update pop-ups are the #1 vector for loader malware"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Close the tab immediately; real browser updates occur silently through browser settings (chrome://settings/help)",
+          "isCorrect": true,
+          "consequence": "Safe and sound! Real browsers never ask third-party streaming sites to distribute their updates."
+        },
+        {
+          "id": "opt-3",
+          "text": "Right-click and inspect element to see if the video will play anyway",
+          "isCorrect": false,
+          "consequence": "Distraction that keeps you on a hostile site pushing exploit kits.",
+          "whatYouMissed": [
+            "The site has no video; it exists solely to trick users into downloading malware"
+          ]
+        }
+      ],
+      "explanation": "Legitimate browsers (Chrome, Edge, Firefox, Safari) update automatically in the background or via their official internal settings menu. Never download browser \"updates\" from third-party media sites.",
+      "hint": "Where do your browser updates actually come from?"
+    },
+    {
+      "id": "browse-04",
+      "title": "The Hidden Traps of Misleading \"DOWNLOAD\" Buttons",
+      "category": "safe_browsing",
+      "categoryLabel": "Safe Browsing",
+      "difficulty": "Hard",
+      "xpReward": 200,
+      "scenarioType": "browser",
+      "scenario": {
+        "urlDomain": "freeware-utilities-hub.net/pdf-tools",
+        "securityFlags": [
+          "HEAVY ADVERTISING NETWORK"
+        ],
+        "body": "Free PDF Merger Tool v2.1\n[🟢 DOWNLOAD NOW (Ad)]\n[🟢 DOWNLOAD (Ad)]\n[🟢 FAST DIRECT DOWNLOAD (Ad)]\n[small text: Direct download installer link .zip]",
+        "contextNote": "There are three giant green pulsing download buttons surrounding one small plain text link."
+      },
+      "question": "Which element is most likely the actual safe open-source tool?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "Click the largest flashing green \"DOWNLOAD NOW\" button",
+          "isCorrect": false,
+          "consequence": "Adware bundle installed! You clicked a deceptive malvertising banner that installs browser hijackers and search redirects.",
+          "whatYouMissed": [
+            "Malvertising banners disguise themselves as primary call-to-action buttons",
+            "Notice the subtle \"Ad\" or \"Advertisement\" disclosure tag"
+          ]
+        },
+        {
+          "id": "opt-2",
+          "text": "Look for the genuine official developer source (e.g. GitHub or official vendor website), avoiding third-party repackaged download hubs",
+          "isCorrect": true,
+          "consequence": "Smart navigation! Always download software directly from the developer’s verified repository or official portal."
+        },
+        {
+          "id": "opt-3",
+          "text": "Click all three buttons to see which one finishes downloading first",
+          "isCorrect": false,
+          "consequence": "Multiple adware toolbars and unwanted programs installed simultaneously.",
+          "whatYouMissed": [
+            "Clicking multiple untrusted ads compounds infection risk"
+          ]
+        }
+      ],
+      "explanation": "Download portals often camouflage deceptive advertising banners as real download buttons. Whenever possible, download software directly from official vendor websites or verified app stores.",
+      "hint": "Where is the safest place to obtain software directly from its creators?"
+    },
+    {
+      "id": "browse-05",
+      "title": "Typo-Squatting on Popular Search & E-Commerce Engines",
+      "category": "safe_browsing",
+      "categoryLabel": "Safe Browsing",
+      "difficulty": "Hard",
+      "xpReward": 200,
+      "scenarioType": "browser",
+      "scenario": {
+        "urlDomain": "https://www.amazn.com/orders/sign-in",
+        "securityFlags": [
+          "UNREGISTERED VENDOR LOOKALIKE"
+        ],
+        "body": "Amazon Login - Enter your email and password to track recent packages.",
+        "contextNote": "You typed \"amazn.com\" by accident when rushing to check your order."
+      },
+      "question": "What is this attack method called and how should you handle it?",
+      "options": [
+        {
+          "id": "opt-1",
+          "text": "It is Typo-Squatting. Immediately close the tab without entering credentials, and bookmark official websites",
+          "isCorrect": true,
+          "consequence": "Outstanding awareness! Scammers buy misspelled versions of famous brand domains to catch fast-typing users."
+        },
+        {
+          "id": "opt-2",
+          "text": "It is a legitimate short URL service operated by Amazon",
+          "isCorrect": false,
+          "consequence": "Credential leak! While some brands buy their common typos to redirect, hostile typo-squatters harvest logins.",
+          "whatYouMissed": [
+            "Typo-squatting domains are a primary fishing net for passwords",
+            "Always verify the address bar before typing passwords"
+          ]
+        },
+        {
+          "id": "opt-3",
+          "text": "Enter a fake password to see if the website accepts it",
+          "isCorrect": false,
+          "consequence": "Still transmits your IP address and metadata to an active hostile server.",
+          "whatYouMissed": [
+            "Do not engage with rogue domains"
+          ]
+        }
+      ],
+      "explanation": "Typosquatting targets common typographical mistakes (omitted letters, transposed letters, wrong TLDs). Always double-check spelling before submitting login credentials, or use trusted browser bookmarks.",
+      "hint": "Notice the missing \"o\" in the domain name."
+    }
+  ],
+  "badges": [
+    {
+      "id": "first-mission",
+      "name": "First Mission",
+      "description": "Completed your very first cybersecurity challenge.",
+      "requirement": "Complete 1 challenge successfully",
+      "icon": "Shield"
+    },
+    {
+      "id": "phishing-hunter",
+      "name": "Phishing Hunter",
+      "description": "Mastered identification of deceptive emails and urgent link lures.",
+      "requirement": "Complete 3 Phishing challenges",
+      "category": "phishing",
+      "icon": "MailWarning"
+    },
+    {
+      "id": "scam-detector",
+      "name": "Scam Detector",
+      "description": "Recognized high-yield financial traps, fake checks, and tech alerts.",
+      "requirement": "Complete 3 Scam challenges",
+      "category": "scam",
+      "icon": "AlertTriangle"
+    },
+    {
+      "id": "password-master",
+      "name": "Password Master",
+      "description": "Understands passphrase entropy, credential stuffing, and FIDO2 MFA.",
+      "requirement": "Complete 3 Password challenges",
+      "category": "password",
+      "icon": "Key"
+    },
+    {
+      "id": "privacy-protector",
+      "name": "Privacy Protector",
+      "description": "Guarded personal identities, permission hygiene, and Wi-Fi transit.",
+      "requirement": "Complete 3 Privacy challenges",
+      "category": "privacy",
+      "icon": "Lock"
+    },
+    {
+      "id": "social-engineer-spotter",
+      "name": "Social Engineer Spotter",
+      "description": "Detected authority pressure, tailgating, and fake recruiters.",
+      "requirement": "Complete 3 Social Engineering challenges",
+      "category": "social_engineering",
+      "icon": "UserX"
+    },
+    {
+      "id": "safe-browser",
+      "name": "Safe Browser",
+      "description": "Spotted deceptive padlocks, homoglyphs, and malvertising traps.",
+      "requirement": "Complete 3 Safe Browsing challenges",
+      "category": "safe_browsing",
+      "icon": "Globe"
+    },
+    {
+      "id": "cyber-guardian",
+      "name": "Cyber Guardian",
+      "description": "Ultimate Defender: Tackled threats across all 6 defense categories.",
+      "requirement": "Complete at least 1 challenge in every category",
+      "icon": "Award"
+    },
+    {
+      "id": "accuracy-ace",
+      "name": "Accuracy Ace",
+      "description": "Maintained a threat detection accuracy rate above 85%.",
+      "requirement": "Reach 85%+ accuracy with at least 5 completed challenges",
+      "icon": "Target"
+    },
+    {
+      "id": "streak-champion",
+      "name": "Streak Champion",
+      "description": "Maintained active threat defense training streak.",
+      "requirement": "Complete challenges across consecutive active sessions",
+      "icon": "Flame"
+    }
+  ]
+}
